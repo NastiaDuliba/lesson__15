@@ -288,7 +288,7 @@ body {
 .title-block__subtitle {
   font-weight: 700;
   letter-spacing: 1px;
-  letter-spacing: 1.5;
+  letter-spacing: 1.5px;
   color: #1e212c;
   margin: 0 0 8px 0;
 }
