@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap");
+
+body {
+  /* Значення за замовченням */
+  font-family: "Lato";
+  color: #424551;
+  /*background: #102675;*/
+  /* font-size: 16px; */
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+/* ============================ */
+
+/* Обмежуючий контейнер */
+[class*="__container"] {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* ============================ */
+.header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+.header__container {
+  align-items: center;
+  gap: 60px;
+  display: flex;
+}
+.header__logo {
+}
+.header__menu {
+  flex-grow: 1;
+}
+.menu {
+}
+.menu__item:hover {
+  text-decoration: underline;
+}
+.menu__list {
+  row-gap: 10px;
+  column-gap: 40px;
+  display: flex;
+}
+.header-menu__actions {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  gap: 36px;
+}
+.header-menu__button {
+}
+.button {
+}
+.header-menu__autor {
+  background: url("../img/icons/user.svg") left no-repeat;
+  padding: 0 0 0 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.header-menu__autor:hover span {
+  text-decoration: underline;
+}
+
+.page__main {
+  padding: 200px 0 80px 0;
+}
+.main-block {
+  position: relative;
+  background: linear-gradient(
+    55.95deg,
+    rgba(255, 64, 58, 0.2) 0%,
+    rgba(247, 94, 5, 0.2) 100%
+  );
+}
+.main-block__container {
+  position: relative;
+  z-index: 2;
+}
+.main-block__body {
+  margin: 0 0 189px 0;
+}
+.body-main {
+  justify-content: space-between;
+  display: flex;
+  flex: 1 1 50%;
+}
+.body-main__content {
+}
+.body-main__play {
+  font-weight: 700;
+  color: #1e212c;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.body-main__play:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+.body-main__play::after {
+  position: absolute;
+  width: 52px;
+  border-radius: 50%;
+  content: "";
+  flex: 0 0 52px;
+  height: 52px;
+  background: #ff3f3a;
+  opacity: 0.12;
+  transform: scale(1.6);
+  animation: play-circle 1s infinite ease alternate-reverse;
+}
+@keyframes play-circle {
+  0% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0.1;
+  }
+}
+.body-main__play::before {
+  width: 52px;
+  border-radius: 50%;
+  content: "";
+  flex: 0 0 52px;
+  height: 52px;
+  background: #ff3f3a url("../img/icons/play.svg") center no-repeat;
+}
+
+.body-main__title {
+  letter-spacing: 1px;
+  padding: 24px 0 0 0;
+  color: #1e212c;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+}
+.body-main__action {
+  display: flex;
+  padding: 60px 0 0 0;
+  gap: 24px;
+}
+.body-main__button {
+}
+.button {
+}
+.button--border {
+}
+.body-main__ilustration img {
+  max-width: 107%;
+  transform: translate(7.8%, 0);
+}
+.body-main__ilustration {
+  flex: 1 0 50%;
+}
+.main-block__advantages {
+}
+.advantages-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.advantages-main__item {
+}
+.item-advantages {
+  display: flex;
+  align-items: center;
+  color: #1e212c;
+  column-gap: 12px;
+}
+.item-advantages__value {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+}
+.item-advantages__text {
+  line-height: 1.5;
+}
+.item-advantages__circle {
+  flex: 0 0 8px;
+  border-radius: 50%;
+  height: 8px;
+  background-color: #ff3f3a;
+}
+.main-block__decor {
+}
+.decor-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.decor-main__item {
+  position: absolute;
+}
+.decor-main__item--1 {
+  z-index: 2;
+  background: url("../img/main/decor/01.svg") 0 0 no-repeat;
+  width: 96px;
+  height: 96px;
+  top: 12%;
+  left: 4.5%;
+}
+.decor-main__item--2 {
+  z-index: 2;
+  background: url("../img/main/decor/02.svg") 0 0 no-repeat;
+  width: 284px;
+  height: 284px;
+  bottom: -9.2%;
+  left: -5.5%;
+}
+.decor-main__item--3 {
+  background: url("../img/main/decor/03.svg") 0 0 no-repeat;
+  width: 88px;
+  height: 47px;
+  top: 45%;
+  left: 40%;
+}
+.decor-main__item--4 {
+  background: url("../img/main/decor/04.svg") 0 0 no-repeat;
+  width: 61px;
+  height: 61px;
+  bottom: 24%;
+  left: 38%;
+}
+.decor-main__item--5 {
+  background: url("../img/main/decor/01.svg") 0 0 no-repeat;
+  width: 96px;
+  height: 96px;
+  top: -1.5%;
+  right: 4%;
+  transform: rotate(135deg);
+}
+.decor-main__item--6 {
+  background: url("../img/main/decor/05.svg") 0 0 no-repeat;
+  width: 187px;
+  height: 137px;
+  bottom: 18%;
+  right: -1.5%;
+}
+.page__createx {
+}
+.createx-block {
+  position: relative;
+  z-index: 2;
+}
+.createx-block__container {
+}
+.createx-block__content {
+  justify-content: space-between;
+  flex: 0 1 50%;
+  display: flex;
+  padding: 180px 0 80px 0;
+}
+.createx-block__column {
+  display: flex;
+  gap: 137px;
+}
+.createx-block__img img {
+  max-width: 100%;
+}
+.createx-block__body {
+}
+.createx-block__title-block {
+}
+.title-block {
+}
+.title-block__subtitle {
+  font-weight: 700;
+  letter-spacing: 1px;
+  letter-spacing: 1.5;
+  color: #1e212c;
+  margin: 0 0 8px 0;
+}
+.title-block__title {
+  font-weight: 900;
+  font-size: 46px;
+  margin: 0 0 40px 0;
+  line-height: 1.3;
+}
+.createx-block__list {
+}
+.createx-block__item {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  background: url("../img/icons/check.svg") 0 5px no-repeat;
+  padding: 0 0 0 32px;
+}
+.createx-block__item:last-child {
+  margin: 0 0 22px 0;
+}
+.createx-block__button {
+}
+.button {
+}
+.createx-block__deckor {
+}
+.createx-deckor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.createx-deckor__item {
+  position: absolute;
+}
+.createx-deckor__item--1 {
+  background: url("../img/createx-block/deckor/createx-deckor__item--1.svg") 0 0
+    no-repeat;
+  width: 215px;
+  height: 225px;
+  bottom: 48%;
+  left: -5.5%;
+}
+.createx-deckor__item--2 {
+  background: url("../img/createx-block/deckor/createx-deckor__item--2.svg") 0 0
+    no-repeat;
+  width: 287px;
+  height: 287px;
+  top: 55%;
+  right: -8.5%;
+}
